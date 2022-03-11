@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+              <!--lien font awesomme-->
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+              <!-- Compiled and minified CSS -->
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+               <!--lien font awesomme-->
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+             <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+             <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+                 <!--------------------------editeur-->
+     
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+</head>
+<body>
+
+    <header>
+        <nav class="blue">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="brand-logo">MyAdmin</a>
+                <a href="#slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="posts.html">Posts</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="comments.html">Comments</a></li>
+                    <li><a href="users.html">Users</a></li>
+                    <li> <button data-target="slide-out" class=" btn blue sidenav-trigger hide-on-large"><i class="fas fa-bars"></i></button></li>
+                </ul>
+            </div>
+        </nav>
+        <ul id="slide-out" class="sidenav">
+            <li>
+                <div class="user-view center" style="background: url(img/a1.jpg)center/cover no-repeat fixed;justify-content: center;">
+                    
+                    <a href="#"><img class="circle " src="img/dr.png" style="margin-left: 30%;"></a>
+                    <a href="#"><span class="white-text name">Dr IMMS</span></a>
+                    <a href="#"><span class="white-text email">maitre.imms@gmail.com</span></a>
+                </div>
+            </li>
+            <li><a href="index.html"><i class="material-icons">dashboard</i>Dashboard</a></li>
+            <li><a href="posts.html">Posts</a></li>
+            <li><a href="categories.html">Catégories</a></li>
+            <li><a href="comments.html">Comments</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="#" class="disabled grey-text">Accounnt Controls</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+
+    </header>
+    <section class="section">
+        <div class="row">
+            <div class="col s12 m3">
+                <div class="card white-text  blue lighten-1">
+                    <div class="card-content center-align">
+                        <i class="material-icons medium">insert_emoticon</i>
+                        <h5>Monthly Visitors</h5>
+                        <h4>35900</h4>
+                        <div class="progress">
+                            <div class="determinate white" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="card">
+                    <div class="card-content center-align">
+                        <i class="material-icons medium">edit</i>
+                        <h5>Blog Posts</h5>
+                        <h4>207</h4>
+                        <div class="progress">
+                            <div class="determinate blue lighten-1" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="card white-text blue lighten-1">
+                    <div class="card-content center-align">
+                        <i class="material-icons medium">mode_comment</i>
+                        <h5>Comments</h5>
+                        <h4>2300</h4>
+                        <div class="progress">
+                            <div class="determinate white" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="card">
+                    <div class="card-content center-align">
+                        <i class="material-icons medium">people</i>
+                        <h5>Users</h5>
+                        <h4>410</h4>
+                        <div class="progress">
+                            <div class="determinate blue lighten-1" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section blue lighten-4">
+        <div class="row">
+            <div class="col s12 m6">
+                <div>
+                    <canvas id="myChart" class="white"></canvas>
+                </div>
+
+            </div>
+            <div class="col s12 m6">
+                <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h5>Latest Comments</h5>
+                    </li>
+                    <li class="collection-item ">
+                        <img src="img/a2.jpg" alt="" class="circle responsive-img" style="width: 30px;">
+                        <span class="title">Rachidatou</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div>
+                            <a href="#" class="green-text text-darken-1">Approve</a> |
+                             <a href="#"  class="red-text">Deny</a>
+                        </div>
+                               
+                    </li>
+                    <li class="collection-item ">
+                        <img src="img/a3.jpg" class="circle responsive-img" style="width: 50px;">
+                        <span class="title"> Dr Richouf </span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div>
+                            <a href="#" class="green-text text-darken-4">Approve</a> 
+                             <a href="#" class="red-text">Deny</a>
+                        </div>
+                                
+                    </li>
+                    <li class="collection-item ">
+                        <img src="img/a4.png" alt="" class="circle responsive-img" style="width: 30px;">
+                        <span class="title">Zeinabou Adam</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div>
+                            <a href="#" class="green-text text-darken-4">Approve</a>
+                            <a href="#"  class="red-text">Deny</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="row">
+            <div class="col s12 m8">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-title">
+                            <h4>Recent Posts</h4>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Categories</th>
+                                </tr>
+                                <tr class="grey lighten-3">
+                                    <td>Post One</td>
+                                    <td>Web development</td>
+                                    <td>
+                                        <a href="#" class="waves-effect waves-light btn blue lighten-1">DETAILS</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Post Two</td>
+                                    <td>Graphic Design</td>
+                                    <td>
+                                        <a href="#" class="waves-effect waves-light btn blue lighten-1">DETAILS</a>
+                                    </td>
+                                </tr>
+                                <tr class="grey lighten-3">
+                                    <td>Post Three</td>
+                                    <td>Web development</td>
+                                    <td>
+                                        <a href="#" class="waves-effect waves-light btn blue lighten-1">DETAILS</a>
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-content">
+                        <h4>Quick Todos</h4>
+                        <div class="row">
+                            <div class="input-field">
+                                <input id="todo" type="text" class="validate">
+                                <label for="todo">Add Todo</label>
+                            </div>
+                        </div>
+                        <ul class="collection">
+                            <li class="collection-item"><div>Todo One<a href="#!" class="secondary-content"><i class="material-icons">close</i></a></div></li>
+                            <li class="collection-item"><div>Todo Two<a href="#!" class="secondary-content"><i class="material-icons">close</i></a></div></li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="blue center white-text" style="padding: 10px;">
+        <p>MyAdmin Codeloccol Copyright © 2022 IMMS</p>
+    </footer>
+
+    <div class="button floaton">
+        <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red">
+                <i class="large material-icons">add</i>
+            </a>
+            <ul>
+                <li><a href="#edit" class="btn-floating blue modal-trigger"><i class="material-icons">mode_edit</i></a>
+                </li>
+                <li><a href="#categorie_modal" class="btn-floating blue modal-trigger"><i
+                            class="material-icons">folder</i></a></li>
+                <li><a href="#user_modal" class="btn-floating blue modal-trigger"><i
+                            class="material-icons">people</i></a></li>
+            </ul>
+        </div>
+        <div id="edit" class="modal">
+            <div class="modal-content">
+                <h4>Add Post</h4>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Title</label>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <select>
+                        <option value="" disabled selected>Select option</option>
+                        <option value="1">Web Developper</option>
+                        <option value="2">Inteligence artificial</option>
+                        <option value="3"> Fulstak Developper</option>
+                    </select>
+                    <label>Category</label>
+                </div>
+
+                <!------------------------------------------>
+                 <!----------------------------editeur-->
+
+                 <textarea>
+                    Welcome to TinyMCE!
+                  </textarea>
+                  <script>
+                    tinymce.init({
+                      selector: 'textarea',
+                      plugins: 'a11ychecker advcode casechange export formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+                      toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter pageembed permanentpen table',
+                      toolbar_mode: 'floating',
+                      tinycomments_mode: 'embedded',
+                      tinycomments_author: 'Author name',
+                    });
+                  </script>
+
+
+                  <!------------------------------Fin editeur-->
+            </div>
+            <div class="modal-footer">
+                <a class="waves-effect waves-light blue btn" style="margin: 0 20px 40px 0;">SUBMIT</a>
+            </div>
+        </div>
+        <div id="categorie_modal" class="modal">
+            <div class="modal-content">
+                <h4>Add Category</h4>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="name_title" type="text" class="validate">
+                        <label for="name_title">Title</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="waves-effect waves-light blue btn" style="margin: 0 20px 40px 0;">SUBMIT</a>
+            </div>
+        </div>
+
+        <div id="user_modal" class="modal">
+            <div class="modal-content">
+                <h4>Add User</h4>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="use_name" type="text" class="validate">
+                        <label for="use_name">Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="use_email" type="email" class="validate">
+                        <label for="use_email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="use_pass" type="password" class="validate">
+                        <label for="use_pass">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <input id="use_pass2" type="password" class="validate">
+                        <label for="use_pass2">Confirm password</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="waves-effect waves-light blue btn" style="margin: 0 20px 40px 0;">SUBMIT</a>
+            </div>
+        </div>
+    </div>
+
+
+
+             <!-- Compiled and minified JavaScript -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+ <script>
+     $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('.fixed-action-btn').floatingActionButton();
+            $('.modal').modal();
+            $('select').formSelect();
+        });
+
+
+ </script>
+ 
+
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <script>
+   const labels = [
+     'January',
+     'February',
+     'March',
+     'April',
+     'May',
+     'June',
+   ];
+ 
+   const data = {
+     labels: labels,
+     datasets: [{
+       label: 'My First dataset IMMS',
+       backgroundColor: 'rgb(255, 99, 132)',
+       borderColor: 'rgb(255, 99, 132)',
+       data: [0, 20, 5, 20, 20, 30, 45],
+     }]
+   };
+ 
+   const config = {
+     type: 'line',
+     data: data,
+     options: {}
+   };
+ </script>
+ <script>
+   const myChart = new Chart(
+     document.getElementById('myChart'),
+     config
+   );
+ </script>
+
+</body>
+</html>
